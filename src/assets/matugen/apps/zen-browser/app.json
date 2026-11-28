@@ -53,5 +53,8 @@
         "$HOME/.var/app/app.zen_browser.zen/.zen/*/prefs.js"
       ]
     }
+  ],
+  "reload": [
+    "pgrep -x zen-bin >/dev/null || exit 0; pkill -TERM -x zen-bin; for i in $(seq 50); do pgrep -x zen-bin >/dev/null || break; sleep 0.2; done; pgrep -x zen-bin >/dev/null && exit 0; setsid -f zen-browser >/dev/null 2>&1"
   ]
 }

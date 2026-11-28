@@ -5,7 +5,8 @@
 #   mango  : writes config/focus-colors.conf and reloads the config
 #   sway, hyprland : applied at runtime (reset by a compositor reload, redone on
 #                    the next color change)
-#   umbriel: no borders in the bundled config, nothing to do
+#   umbriel: runtime override via `umbriel config set` (reset when the
+#            compositor restarts, redone on the next color change)
 # Does nothing when the compositor is not recognized.
 
 command -v jq >/dev/null 2>&1 || exit 0
@@ -72,5 +73,15 @@ bordercolor=0x${i}ff
 CONF
     ensure_include "$dir/config.conf" 'source=\.\/config\/layout\.conf' 'source=./config/focus-colors.conf'
     mmsg dispatch reload_config >/dev/null 2>&1
+elif [ -n "${UMBRIEL_SOCKET:-}" ] && command -v umbriel >/dev/null 2>&1; then
+    umbriel config set colors.border.focused "\"#${a}ff\"" >/dev/null 2>&1
+    umbriel config set colors.border.unfocused "\"#${i}ff\"" >/dev/null 2>&1
+    # Persist across compositor restarts by rewriting the two values in place.
+    conf="$CFG/umbriel/config.toml"
+    if [ -f "$conf" ] && [ ! -L "$conf" ] && [ -w "$conf" ] && grep -q '^\[colors\.border\]' "$conf"; then
+        tmp=$(mktemp "$conf.XXXXXX") && sed \
+            -e "/^\[colors\.border\]/,/^\[/{s|^focused *=.*|focused = \"#${a}ff\"|;s|^unfocused *=.*|unfocused = \"#${i}ff\"|}" \
+            "$conf" > "$tmp" && { cmp -s "$tmp" "$conf" && rm -f "$tmp" || mv -f "$tmp" "$conf"; } || rm -f "$tmp"
+    fi
 fi
 exit 0
