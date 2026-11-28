@@ -1,0 +1,11 @@
+[include]
+files = [
+  "config/input.toml",
+  "config/layout.toml",
+  "config/autostart.toml",
+  "config/keybinds.toml",
+]
+
+[colors.border]
+focused = "#a5d396ff"
+unfocused = "#43483fff"

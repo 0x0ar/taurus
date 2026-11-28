@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "risk": {
+    "read": "Only reads state; safe to run any time.",
+    "change": "Changes settings or UI state; reversible (config writes keep a backup).",
+    "disruptive": "Interrupts the session, locks or powers off the machine, or restarts the shell. Ask the user first."
+  },
+  "commands": [
+    {
+      "name": "commands",
+      "usage": "commands [--json]",
+      "description": "List every command with its usage and risk level (read, change or disruptive).",
+      "risk": "read"
+    },
+    {
+      "name": "share",
+      "usage": "share <export [-o FILE|-]|import FILE [--apply] [--overwrite] [--layouts]>",
+      "description": "Export your setup (changed settings, themes, scenes, layouts) to one file with personal data left out, or preview and import someone else's. Import only previews unless --apply is given.",
+      "risk": "change"
+    },
+    {
+      "name": "doctor",
+      "usage": "doctor [--json] [--fix]",
+      "description": "Check why the shell may not run (settings, daemon, shell, log, services). --fix applies only safe repairs: restore a settings.json that does not parse, remove stale pid files.",
+      "risk": "change"
+    },
+    {
+      "name": "scene",
+      "usage": "scene <list [--json]|show <name>|apply <name>|off|status [--json]|save <name> [fields...]|delete <name>|auto <on|off|status>>",
+      "description": "Switch named bundles of settings (do not disturb, autohide, theme, screen warmth...) by hand or automatically by focused app and time.",
+      "risk": "change"
+    },
+    {
+      "name": "agent",
+      "usage": "agent skills <install|uninstall|status> [--json] [--force-path]",
+      "description": "Install the Taurus AI agent skills into Claude Code and ~/.agents/skills, remove them, or show their state.",
+      "risk": "change"
+    },
+    {
+      "name": "info",
+      "usage": "info <notifications|idle|dock|sfx|theme|lang> [key] | info <wallpaper [screen]|monitors [--json]|updates [--json]|paths [--json]>",
+      "description": "Show the current state of a setting, and the install, state, log and config paths.",
+      "risk": "read"
+    },
+    {
+      "name": "config",
+      "usage": "config <get <key> [fallback]|set <key> <value>|reset <key>|diff|backup|backups|restore [file|latest]|dump|path|edit>",
+      "description": "Read and change settings.json. Writes make a backup first; reset restores the shipped default; diff shows what you changed.",
+      "risk": "change"
+    },
+    {
+      "name": "set",
+      "usage": "set <notifications dnd|idle caffeine|dock <enabled|autohide>|sfx mute> [on|off|toggle] | set theme <preset <name>|matugen [on|off|toggle]|app <id> [on|off|toggle]> | set lang <code> | set wallpaper <value> [screen]",
+      "description": "Change a setting (notifications, idle, dock, sfx, theme, lang, wallpaper).",
+      "risk": "change"
+    },
+    {
+      "name": "trigger",
+      "usage": "trigger <idle <dim|dpms|lock|suspend>|notifications clear|firstlaunch <trigger|reset>|theme <reload|generate <image> [mode] [scheme]>>",
+      "description": "Run a one-off action (idle, notifications, theme, firstlaunch).",
+      "risk": "disruptive"
+    },
+    {
+      "name": "msg",
+      "usage": "msg <action|workspace> ...",
+      "description": "Dispatch commands or workspace switches to the UI manager (open, toggle or close panels).",
+      "risk": "change"
+    },
+    {
+      "name": "settings",
+      "usage": "settings [tab [subtab]|toggle [tab]|close]",
+      "description": "Open the settings window, optionally on a given tab.",
+      "risk": "change"
+    },
+    {
+      "name": "launch",
+      "usage": "launch <start> [args...]",
+      "description": "Launch standalone components (start).",
+      "risk": "change"
+    },
+    {
+      "name": "ipc",
+      "usage": "ipc call <target> <method> [args...]",
+      "description": "Forward IPC calls directly to the shell.",
+      "risk": "change"
+    },
+    {
+      "name": "kill",
+      "usage": "kill",
+      "description": "Cleanly stop the running daemon.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "restart",
+      "usage": "restart",
+      "description": "Stop and start the daemon again.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "exit",
+      "usage": "exit",
+      "description": "Terminate graphical session and exit compositor.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "lock",
+      "usage": "lock",
+      "description": "Activate the lockscreen interface.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "suspend",
+      "usage": "suspend",
+      "description": "Lock the screen and suspend the system.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "hibernate",
+      "usage": "hibernate",
+      "description": "Hibernate the system.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "reboot",
+      "usage": "reboot",
+      "description": "Reboot the system.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "poweroff",
+      "usage": "poweroff",
+      "description": "Power off the system.",
+      "risk": "disruptive"
+    },
+    {
+      "name": "redactor",
+      "usage": "redactor [monitor] [widget]",
+      "description": "Open or toggle the desktop widget layout editor.",
+      "risk": "change"
+    },
+    {
+      "name": "lock-redactor",
+      "usage": "lock-redactor [action]",
+      "description": "Toggle, open or close the lock screen layout editor.",
+      "risk": "change"
+    },
+    {
+      "name": "volume",
+      "usage": "volume",
+      "description": "Control default audio sink/source volume and mute states.",
+      "risk": "change"
+    },
+    {
+      "name": "brightness",
+      "usage": "brightness",
+      "description": "Adjust backlight display brightness.",
+      "risk": "change"
+    },
+    {
+      "name": "reload",
+      "usage": "reload",
+      "description": "Force reload quickshell desktop elements.",
+      "risk": "change"
+    },
+    {
+      "name": "weather",
+      "usage": "weather",
+      "description": "Fetch and manage weather forecast data and caches.",
+      "risk": "read"
+    },
+    {
+      "name": "location",
+      "usage": "location",
+      "description": "Retrieve and update geographic coordinates.",
+      "risk": "change"
+    },
+    {
+      "name": "location_manual",
+      "usage": "location_manual",
+      "description": "Set geographic coordinates and timezone manually.",
+      "risk": "change"
+    },
+    {
+      "name": "screenshot",
+      "usage": "screenshot",
+      "description": "Capture screen images, record video, or parse QR codes.",
+      "risk": "change"
+    },
+    {
+      "name": "colorpicker",
+      "usage": "colorpicker",
+      "description": "Pick a color from the screen and copy it to the clipboard.",
+      "risk": "read"
+    },
+    {
+      "name": "gamma",
+      "usage": "gamma",
+      "description": "Adjust color temperature and automatic day/night schedule.",
+      "risk": "change"
+    }
+  ]
+}

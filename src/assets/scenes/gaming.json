@@ -1,0 +1,13 @@
+{
+  "name": "gaming",
+  "description": "No interruptions while a game is focused",
+  "dnd": true,
+  "dock_autohide": true,
+  "bar_autohide": true,
+  "mute_sfx": true,
+  "caffeine": true,
+  "gamma_temperature": 6500,
+  "triggers": {
+    "apps": ["steam_app_*", "gamescope", "lutris", "heroic", "steam"]
+  }
+}

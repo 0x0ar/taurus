@@ -1,0 +1,6 @@
+[layout]
+gap = 4
+
+[appearance]
+border_width = 1
+outer_border_width = 0

@@ -1,0 +1,6 @@
+{
+  "name": "work",
+  "description": "Focus: do not disturb and interface sounds off",
+  "dnd": true,
+  "mute_sfx": true
+}

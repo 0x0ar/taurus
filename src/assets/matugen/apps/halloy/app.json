@@ -1,0 +1,32 @@
+{
+  "name": "Halloy",
+  "category": "apps",
+  "icon": "󰭹",
+  "detect": {
+    "bin": [
+      "halloy"
+    ],
+    "flatpak": [
+      "org.squidowl.halloy"
+    ]
+  },
+  "templates": [
+    {
+      "input": "taurus.toml",
+      "output": "$XDG_CONFIG_HOME/halloy/themes/taurus.toml"
+    }
+  ],
+  "integrate": [
+    {
+      "type": "line",
+      "file": "$XDG_CONFIG_HOME/halloy/config.toml",
+      "section": "",
+      "line": "theme = \"taurus\"",
+      "disable": "^\\s*theme\\s*=",
+      "create": true
+    }
+  ],
+  "reload": [
+    "pkill -USR1 -x halloy; true"
+  ]
+}

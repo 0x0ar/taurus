@@ -1,0 +1,20 @@
+layout {
+    gaps 4
+    border {
+        off
+    }
+    focus-ring {
+        width 1
+        active-color "#a5d396"
+        inactive-color "#43483f"
+    }
+}
+
+window-rule {
+    draw-border-with-background false
+}
+
+layer-rule {
+    match namespace="^wallpaper-overview$"
+    place-within-backdrop true
+}

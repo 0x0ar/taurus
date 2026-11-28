@@ -1,0 +1,28 @@
+{
+  "name": "Taurus",
+  "isColorFocused": true,
+  "colors": {
+    "base": "#000000",
+    "mantle": "#000000",
+    "crust": "#000000",
+    "text": "#e3f5ea",
+    "subtext0": "#a8c7b4",
+    "subtext1": "#c4e0cf",
+    "surface0": "#0c140f",
+    "surface1": "#14201a",
+    "surface2": "#1e2f25",
+    "overlay0": "#3f6650",
+    "overlay1": "#538068",
+    "overlay2": "#6a9c80",
+    "blue": "#00e676",
+    "sapphire": "#00bd61",
+    "peach": "#b2f5c8",
+    "green": "#00e676",
+    "red": "#ff6b6b",
+    "mauve": "#33eb91",
+    "pink": "#8af5c0",
+    "yellow": "#d4f56a",
+    "maroon": "#ff9d9d",
+    "teal": "#5cf0a8"
+  }
+}

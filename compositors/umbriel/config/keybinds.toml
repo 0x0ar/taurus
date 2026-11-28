@@ -1,0 +1,80 @@
+[keybinds]
+"Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+F" = { action = "spawn firefox", repeat = false }
+"Mod+E" = { action = "spawn ski", repeat = false }
+"Mod+BackSpace" = { action = "scratchpad-toggle", repeat = false }
+"Mod+Q" = { action = "window-close", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-floating", repeat = false }
+
+"XF86MonBrightnessDown" = "spawn taurus brightness lower"
+"XF86MonBrightnessUp" = "spawn taurus brightness raise"
+
+"Print" = { action = "spawn taurus screenshot", repeat = false }
+"Shift+Print" = { action = "spawn taurus screenshot --edit", repeat = false }
+"Mod+Print" = { action = "spawn taurus screenshot --full", repeat = false }
+"Mod+Shift+Print" = { action = "spawn taurus screenshot --full --edit", repeat = false }
+
+"XF86PowerOff" = { action = "spawn taurus lock", repeat = false }
+"Mod+L" = { action = "spawn taurus lock", repeat = false }
+
+"Mod+Space" = { action = "spawn playerctl play-pause", repeat = false }
+"XF86AudioPlay" = { action = "spawn playerctl play-pause", repeat = false }
+"XF86AudioPrev" = { action = "spawn playerctl previous", repeat = false }
+"XF86AudioNext" = { action = "spawn playerctl next", repeat = false }
+"XF86AudioMicMute" = { action = "spawn taurus volume mic-toggle", repeat = false }
+"XF86AudioMute" = { action = "spawn taurus volume mute-toggle", repeat = false }
+"XF86AudioLowerVolume" = "spawn taurus volume lower"
+"XF86AudioRaiseVolume" = "spawn taurus volume raise"
+
+"Mod+R" = { action = "spawn taurus reload", repeat = false }
+"Mod+C" = { action = "spawn taurus msg toggle clipboard", repeat = false }
+"Mod+D" = { action = "spawn taurus msg toggle launcher", repeat = false }
+"Mod+M" = { action = "spawn taurus msg toggle music", repeat = false }
+"Mod+B" = { action = "spawn taurus msg toggle system", repeat = false }
+"Mod+W" = { action = "spawn taurus msg toggle wallpaper", repeat = false }
+"Mod+S" = { action = "spawn taurus msg toggle calendar", repeat = false }
+"Mod+N" = { action = "spawn taurus msg toggle network", repeat = false }
+"Mod+V" = { action = "spawn taurus msg toggle volume", repeat = false }
+"Mod+H" = { action = "spawn taurus msg toggle settings", repeat = false }
+"Mod+A" = { action = "spawn taurus msg bar autohide", repeat = false }
+
+"Mod+Left" = "window-focus-left"
+"Mod+Right" = "window-focus-right"
+"Mod+Up" = "workspace-previous"
+"Mod+Down" = "workspace-next"
+
+# Mouse wheel: main wheel = workspaces, thumb wheel (e.g. MX Master) = windows.
+"Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
+"Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
+"Mod+WheelRight" = { action = "window-focus-right", cooldown_ms = 150 }
+"Mod+WheelLeft" = { action = "window-focus-left", cooldown_ms = 150 }
+
+"Mod+Ctrl+Left" = "column-move-left"
+"Mod+Ctrl+Right" = "column-move-right"
+"Mod+Ctrl+Up" = "window-move-to-workspace-previous"
+"Mod+Ctrl+Down" = "window-move-to-workspace-next"
+
+"Mod+Shift+Left" = "window-modify-primary-extent -0.05"
+"Mod+Shift+Right" = "window-modify-primary-extent +0.05"
+"Mod+Shift+Up" = "window-modify-secondary-extent -0.05"
+"Mod+Shift+Down" = "window-modify-secondary-extent +0.05"
+
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
+
+"Mod+Shift+1" = "window-move-to-workspace 1"
+"Mod+Shift+2" = "window-move-to-workspace 2"
+"Mod+Shift+3" = "window-move-to-workspace 3"
+"Mod+Shift+4" = "window-move-to-workspace 4"
+"Mod+Shift+5" = "window-move-to-workspace 5"
+"Mod+Shift+6" = "window-move-to-workspace 6"
+"Mod+Shift+7" = "window-move-to-workspace 7"
+"Mod+Shift+8" = "window-move-to-workspace 8"
+"Mod+Shift+9" = "window-move-to-workspace 9"

@@ -1,0 +1,30 @@
+{
+  "name": "Bash",
+  "category": "tools",
+  "icon": "",
+  "default": true,
+  "hint": "restart",
+  "detect": {
+    "bin": [
+      "bash"
+    ]
+  },
+  "templates": [
+    {
+      "input": "prompt.sh",
+      "output": "$XDG_CONFIG_HOME/bash/taurus.sh"
+    }
+  ],
+  "integrate": [
+    {
+      "type": "line",
+      "file": "$HOME/.bashrc",
+      "line": "[ -f $TILDE_CONFIG_HOME/bash/taurus.sh ] && . $TILDE_CONFIG_HOME/bash/taurus.sh",
+      "when": {
+        "path": [
+          "$HOME/.bashrc"
+        ]
+      }
+    }
+  ]
+}

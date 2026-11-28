@@ -1,0 +1,83 @@
+bindsym $mod+Return exec $terminal
+bindsym $mod+F exec firefox
+bindsym $mod+E exec ski
+bindsym $mod+BackSpace scratchpad show
+bindsym $mod+Q kill
+bindsym $mod+Shift+F floating toggle
+
+bindsym XF86MonBrightnessDown exec taurus brightness lower
+bindsym XF86MonBrightnessUp exec taurus brightness raise
+
+bindsym Print exec taurus screenshot
+bindsym Shift+Print exec taurus screenshot --edit
+bindsym $mod+Print exec taurus screenshot --full
+bindsym $mod+Shift+Print exec taurus screenshot --full --edit
+
+bindsym XF86PowerOff exec taurus lock
+bindsym $mod+L exec taurus lock
+
+bindsym $mod+space exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioMicMute exec taurus volume mic-toggle
+bindsym XF86AudioMute exec taurus volume mute-toggle
+bindsym XF86AudioLowerVolume exec taurus volume lower
+bindsym XF86AudioRaiseVolume exec taurus volume raise
+
+bindsym $mod+R exec taurus reload
+bindsym $mod+C exec taurus msg toggle clipboard
+bindsym $mod+D exec taurus msg toggle launcher
+bindsym $mod+M exec taurus msg toggle music
+bindsym $mod+B exec taurus msg toggle system
+bindsym $mod+W exec taurus msg toggle wallpaper
+bindsym $mod+S exec taurus msg toggle calendar
+bindsym $mod+N exec taurus msg toggle network
+bindsym $mod+V exec taurus msg toggle volume
+bindsym $mod+H exec taurus msg toggle settings
+bindsym $mod+A exec taurus msg bar autohide
+
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up workspace prev
+bindsym $mod+Down workspace next
+
+# Mouse wheel: main wheel = workspaces, thumb wheel (e.g. MX Master) = windows.
+# button4/5 = wheel up/down, button6/7 = wheel left/right. sway wraps at the ends.
+bindsym --whole-window $mod+button5 workspace next
+bindsym --whole-window $mod+button4 workspace prev
+bindsym --whole-window $mod+button7 focus right
+bindsym --whole-window $mod+button6 focus left
+
+bindsym $mod+Ctrl+Left move left
+bindsym $mod+Ctrl+Right move right
+bindsym $mod+Ctrl+Up move container to workspace prev; workspace prev
+bindsym $mod+Ctrl+Down move container to workspace next; workspace next
+
+bindsym $mod+Shift+Left resize shrink width 5 ppt
+bindsym $mod+Shift+Right resize grow width 5 ppt
+bindsym $mod+Shift+Up resize shrink height 5 ppt
+bindsym $mod+Shift+Down resize grow height 5 ppt
+
+bindsym $mod+1 exec taurus msg workspace 1
+bindsym $mod+2 exec taurus msg workspace 2
+bindsym $mod+3 exec taurus msg workspace 3
+bindsym $mod+4 exec taurus msg workspace 4
+bindsym $mod+5 exec taurus msg workspace 5
+bindsym $mod+6 exec taurus msg workspace 6
+bindsym $mod+7 exec taurus msg workspace 7
+bindsym $mod+8 exec taurus msg workspace 8
+bindsym $mod+9 exec taurus msg workspace 9
+bindsym $mod+0 exec taurus msg workspace 10
+
+bindsym $mod+Shift+1 exec taurus msg workspace 1 move
+bindsym $mod+Shift+2 exec taurus msg workspace 2 move
+bindsym $mod+Shift+3 exec taurus msg workspace 3 move
+bindsym $mod+Shift+4 exec taurus msg workspace 4 move
+bindsym $mod+Shift+5 exec taurus msg workspace 5 move
+bindsym $mod+Shift+6 exec taurus msg workspace 6 move
+bindsym $mod+Shift+7 exec taurus msg workspace 7 move
+bindsym $mod+Shift+8 exec taurus msg workspace 8 move
+bindsym $mod+Shift+9 exec taurus msg workspace 9 move
+bindsym $mod+Shift+0 exec taurus msg workspace 10 move

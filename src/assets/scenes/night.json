@@ -1,0 +1,10 @@
+{
+  "name": "night",
+  "description": "Warm screen and quiet in the evening",
+  "dnd": true,
+  "mute_sfx": true,
+  "gamma_temperature": 3800,
+  "triggers": {
+    "time": {"from": "22:00", "to": "07:00"}
+  }
+}

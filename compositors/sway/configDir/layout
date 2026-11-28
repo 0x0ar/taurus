@@ -1,0 +1,8 @@
+gaps inner 4
+gaps outer 0
+default_border pixel 1
+default_floating_border pixel 1
+client.focused #a5d396 #a5d396 #ffffff #a5d396 #a5d396
+client.unfocused #43483f #43483f #ffffff #43483f #43483f
+smart_borders off
+hide_edge_borders none

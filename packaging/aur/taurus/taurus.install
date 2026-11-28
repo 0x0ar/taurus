@@ -1,0 +1,5 @@
+post_install() {
+    echo "==> Taurus is installed. Complete the manual setup steps for compositor configs,"
+    echo "    settings, wallpapers, services and the login screen:"
+    echo "    https://0x0ar.github.io/taurus/installation#build-from-source-on-arch"
+}

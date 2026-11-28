@@ -1,0 +1,26 @@
+{
+  "name": "Zellij",
+  "category": "tools",
+  "icon": "",
+  "detect": {
+    "bin": [
+      "zellij"
+    ]
+  },
+  "templates": [
+    {
+      "input": "taurus.kdl",
+      "output": "$XDG_CONFIG_HOME/zellij/themes/taurus.kdl"
+    }
+  ],
+  "integrate": [
+    {
+      "type": "line",
+      "file": "$XDG_CONFIG_HOME/zellij/config.kdl",
+      "line": "theme \"taurus\"",
+      "comment": "//",
+      "disable": "^theme\\s+\"",
+      "create": true
+    }
+  ]
+}

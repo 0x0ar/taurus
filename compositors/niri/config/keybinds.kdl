@@ -1,0 +1,86 @@
+binds {
+    Mod+Return { spawn "kitty"; }
+    Mod+F { spawn "firefox"; }
+    Mod+E { spawn "ski"; }
+    Mod+Backspace { toggle-overview; }
+    Mod+Q { close-window; }
+    Mod+Alt+F { maximize-window-to-edges; }
+    Mod+Shift+F { toggle-window-floating; }
+
+    XF86MonBrightnessDown { spawn "taurus" "brightness" "lower"; }
+    XF86MonBrightnessUp { spawn "taurus" "brightness" "raise"; }
+
+    Print { spawn "taurus" "screenshot"; }
+    Shift+Print { spawn "taurus" "screenshot" "--edit"; }
+    Super+Print { spawn "taurus" "screenshot" "--full"; }
+    Super+Shift+Print { spawn "taurus" "screenshot" "--full" "--edit"; }
+
+    XF86PowerOff { spawn "taurus" "lock"; }
+    Mod+L { spawn "taurus" "lock"; }
+
+    Mod+Space { spawn "playerctl" "play-pause"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioMicMute { spawn "taurus" "volume" "mic-toggle"; }
+    XF86AudioMute { spawn "taurus" "volume" "mute-toggle"; }
+    XF86AudioLowerVolume { spawn "taurus" "volume" "lower"; }
+    XF86AudioRaiseVolume { spawn "taurus" "volume" "raise"; }
+
+    Mod+R { spawn "taurus" "reload"; }
+    Mod+C { spawn "taurus" "msg" "toggle" "clipboard"; }
+    Mod+D { spawn "taurus" "msg" "toggle" "launcher"; }
+    Mod+M { spawn "taurus" "msg" "toggle" "music"; }
+    Mod+B { spawn "taurus" "msg" "toggle" "system"; }
+    Mod+W { spawn "taurus" "msg" "toggle" "wallpaper"; }
+    Mod+S { spawn "taurus" "msg" "toggle" "calendar"; }
+    Mod+N { spawn "taurus" "msg" "toggle" "network"; }
+    Mod+V { spawn "taurus" "msg" "toggle" "volume"; }
+    Mod+H { spawn "taurus" "msg" "toggle" "settings"; }
+    Mod+A { spawn "taurus" "msg" "bar" "autohide"; }
+
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-or-workspace-up; }
+    Mod+Down { focus-window-or-workspace-down; }
+
+    // Mouse wheel: main wheel = workspaces, thumb wheel (e.g. MX Master) = columns.
+    // Stops at the edges (niri does not wrap).
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+    Mod+WheelScrollRight cooldown-ms=150 { focus-column-right; }
+    Mod+WheelScrollLeft cooldown-ms=150 { focus-column-left; }
+
+    Mod+Ctrl+Left { move-column-left; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+Up { move-column-to-workspace-up; }
+    Mod+Ctrl+Down { move-column-to-workspace-down; }
+
+    Mod+Shift+Left { set-column-width "-5%"; }
+    Mod+Shift+Right { set-column-width "+5%"; }
+    Mod+Shift+Up { set-window-height "-5%"; }
+    Mod+Shift+Down { set-window-height "+5%"; }
+
+    Mod+1 { spawn "taurus" "msg" "workspace" "1"; }
+    Mod+2 { spawn "taurus" "msg" "workspace" "2"; }
+    Mod+3 { spawn "taurus" "msg" "workspace" "3"; }
+    Mod+4 { spawn "taurus" "msg" "workspace" "4"; }
+    Mod+5 { spawn "taurus" "msg" "workspace" "5"; }
+    Mod+6 { spawn "taurus" "msg" "workspace" "6"; }
+    Mod+7 { spawn "taurus" "msg" "workspace" "7"; }
+    Mod+8 { spawn "taurus" "msg" "workspace" "8"; }
+    Mod+9 { spawn "taurus" "msg" "workspace" "9"; }
+    Mod+0 { spawn "taurus" "msg" "workspace" "10"; }
+
+    Mod+Shift+1 { spawn "taurus" "msg" "workspace" "1" "move"; }
+    Mod+Shift+2 { spawn "taurus" "msg" "workspace" "2" "move"; }
+    Mod+Shift+3 { spawn "taurus" "msg" "workspace" "3" "move"; }
+    Mod+Shift+4 { spawn "taurus" "msg" "workspace" "4" "move"; }
+    Mod+Shift+5 { spawn "taurus" "msg" "workspace" "5" "move"; }
+    Mod+Shift+6 { spawn "taurus" "msg" "workspace" "6" "move"; }
+    Mod+Shift+7 { spawn "taurus" "msg" "workspace" "7" "move"; }
+    Mod+Shift+8 { spawn "taurus" "msg" "workspace" "8" "move"; }
+    Mod+Shift+9 { spawn "taurus" "msg" "workspace" "9" "move"; }
+    Mod+Shift+0 { spawn "taurus" "msg" "workspace" "10" "move"; }
+}
